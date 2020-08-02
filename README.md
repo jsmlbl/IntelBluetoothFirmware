@@ -1,10 +1,12 @@
 # IntelBluetoothFirmware
 
+[![Join the chat at https://gitter.im/OpenIntelWireless/itlwm](https://badges.gitter.im/OpenIntelWireless/IntelBluetoothFirmware.svg)](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 - **English**
 - [简体中文](/.github/README-zh_Hans.md)
 
 IntelBluetoothFirmware is a Kernel Extension that uploads Intel Wireless Bluetooth Firmware to provide native Bluetooth in macOS.
-The firmware binary files are com from the Linux Open Source Project.
+The firmware binary files are coming from the Linux Open Source Project.
 
 After a few months of public testing, it seems like this Kext works well and stable.
 Currently it supports macOS 10.13 or higher, supported device ids are:
@@ -17,6 +19,7 @@ Currently it supports macOS 10.13 or higher, supported device ids are:
 - 0x8087, 0x0026
 - 0x8087, 0x0029
 - 0x8087, 0x0a2b
+- 0x8087, 0x0032
 
 ## Installation
 
@@ -38,3 +41,7 @@ log show --last boot | grep IntelFirmware
 ```
 
 Save the driver logs, send it to me by opening an issue. **If there are no logs, you should probably check your Bootloader, USB, BIOS, etc.**
+
+## Credits
+- [torvalds/linux](https://github.com/torvalds/linux)
+- [acidanthera/BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)

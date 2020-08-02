@@ -63,16 +63,7 @@ public:
     
     bool initInterface();
     
-    void publishReg();
-    
-    OSData *requestFirmware(const char* resourceName);
-    
-    static void onLoadFW(
-    OSKextRequestTag                requestTag,
-    OSReturn                        result,
-    const void                    * resourceData,
-    uint32_t                        resourceDataLength,
-                         void                          * context);
+    void publishReg(bool isSucceed);
     
 public:
     
@@ -85,11 +76,6 @@ public:
     
     IOLock* completion;
     IOUSBHostCompletion usbCompletion;
-    IOLock* resourceCompletion;
-    IOLock* resourceCallbackCompletion;
-    
-    IOLock* bootupLock;
-    IOLock* downloadLock;
     
     int mDeviceState;
     IntelVersion *ver;
